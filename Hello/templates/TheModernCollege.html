@@ -1,0 +1,311 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Suraj Kupate" />
+    <title>The College Finder</title>
+    <script
+      src="https://kit.fontawesome.com/1c9ad4b785.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="The Modern College.css" /> -->
+    <!-- <link rel="stylesheet" href="../all.css" /> -->
+  </head>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+  font-family: "Century Gothic", sans-serif;
+}
+
+/* .navlist {
+  width: 100%;
+  height: 8%;
+  position: absolute;
+  padding: 5px 10%;
+  background-color: #808484bb;
+}
+.navlist ul {
+  display: flex;
+  list-style: none;
+}
+.navlist ul li:first-child {
+  flex: 1;
+  color: #ffffff;
+}
+.navlist ul li h4 {
+  font-family: serif;
+  font-size: 2.5rem;
+}
+.navlist ul a {
+  display: block;
+  margin-left: 20px;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+.navlist ul a:hover {
+  color: #ff8800;
+} */
+
+.main-box {
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(#000000bb, #000000bb),
+    url(/static/info-header-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30vh;
+}
+
+.main-box h1 {
+  word-spacing: 8px;
+  margin-bottom: 15px;
+  font-family: serif;
+}
+.main-box p {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  margin-bottom: 40px;
+}
+.main-box button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 1px solid #ff8800;
+  color: #ffffff;
+}
+.main-box button:hover {
+  background: #ff8800;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.container h2 {
+  color: #ff8800;
+  text-align: center;
+  margin: 30px;
+  font-family: "Arial Narrow Bold", sans-serif;
+  letter-spacing: 5px;
+}
+.container h2::before,
+.container h2::after {
+  content: "-----";
+  letter-spacing: -5px;
+  font-weight: lighter;
+  margin: 0 20px 0 10px;
+}
+.container .row {
+  display: flex;
+  justify-content: space-between;
+}
+.container .column {
+  width: 32%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.container .column img {
+  width: 100%;
+  height: auto;
+}
+.container .column a:last-child {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0;
+  top: 99%;
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ff8800c0;
+  text-align: center;
+  padding-top: 14vw;
+  font-size: 3vw;
+  color: #ffffff;
+  text-decoration: none;
+}
+.container .column:hover a:last-child {
+  height: 100%;
+  top: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+  </style>
+  <body>
+    <nav class="navlist">
+      <ul>
+        <li><h4>The College Finder</h4></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/contact">ContectUs</a></li>
+      </ul>
+    </nav>
+    <div class="main-box">
+      <h1>Find The College Which is Best For you</h1>
+      <p>India'sEngeneering Colleges</p>
+      <button>Find now</button>
+    </div>
+    <div class="container">
+      <h2>Some Best Bhopal Affilated College</h2>
+      <div class="row">
+        <div class="column">
+          <a href=""><img src="/static/lnct-slider2.jpg" alt="" /></a>
+          <a href="">LNCT</a>
+        </div>
+        <!-- lnct-slider2.jpg -->
+        <div class="column">
+          <a href=""><img src="/static/Oriental.jpg" alt="" /></a>
+          <a href="">ORIENTAL</a>
+        </div>
+        <div class="column">
+          <a href=""><img src="/static/Tit.jpg" alt="" /></a>
+          <a href="">TIT</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <!-- <li><a href="#">shipping</a></li>
+  	 				<li><a href="#">returns</a></li>
+  	 				<li><a href="#">order status</a></li>
+  	 				<li><a href="#">payment options</a></li> -->
+            </ul>
+          </div>
+          <!-- <div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="#">watch</a></li>
+  	 				<li><a href="#">bag</a></li>
+  	 				<li><a href="#">shoes</a></li>
+  	 				<li><a href="#">dress</a></li>
+  	 			</ul>
+  	 		</div> -->
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+{% endblock body %}

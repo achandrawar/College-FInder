@@ -1,0 +1,90 @@
+<!-- {% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactUs.css" />
+    <script
+      src="https://kit.fontawesome.com/1c9ad4b785.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form method="post" action = "/contactUs">
+      <!-- {% csrf_token %} -->
+    <section class="contact">
+      <div class="content">
+        <h2>Contact Us</h2>
+        <p></p>
+      </div>
+      <div class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="text">
+              <h3>Address</h3>
+              {% comment %} <p> {% endcomment %}
+                {% comment %} 167-A Ahinsha vihar colony Ayodhya bypass Road,<br />Bhopal,M.P,<br />462041 {% endcomment %}
+              {% comment %} </p> {% endcomment %}
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>9876543210</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>ayushchandrawar.ac@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactForm">
+          <form>
+            <h2>Send Message</h2>
+            <div class="inputBox">
+              <input type="text" name="name" reqired="required" />
+              <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="email" reqired="required" />
+              <span>Email</span>
+            </div>
+            <div class="inputBox">
+              <input type="number" name="phone" reqired="required" />
+              <span>Number</span>
+            </div>
+            <div class="inputBox">
+              <textarea name ="desc" required="required"></textarea>
+              <span>Type your Message....</span>
+            </div>
+            <div class="'inputBox">
+              <input type="submit" name="" value="send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </form>
+  </body>
+</html>
+
+{% endblock body %}
